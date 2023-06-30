@@ -17,29 +17,29 @@ Doit 알고리즘 코딩 테스트 자바 편.
 
 
 ## 목차
-0. [시간복잡도와 디버깅](https://github.com/hongjaewonP/Algorithm/blob/main/0.%20test.md)
-1. [자료구조](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0)
+### 0. [시간복잡도와 디버깅](https://github.com/hongjaewonP/Algorithm/blob/main/0.%20test.md)
+### 1. 자료구조
   - [배열과 리스트](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EB%B0%B0%EC%97%B4%EA%B3%BC%20%EB%A6%AC%EC%8A%A4%ED%8A%B8)
   - [구간 합](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EA%B5%AC%EA%B0%84%20%ED%95%A9)
   - [스택과 큐](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%8A%A4%ED%83%9D%EA%B3%BC%20%ED%81%90)
-2. 정렬
+### 2. 정렬
   - 버블 정렬
   - 선택 정렬
   - 삽입 정렬
   - 퀵 정렬
   - 병합 정렬
   - 기수 정렬
-3. 탐색
+### 3. 탐색
   - DFS
   - BFS
   - 이진 탐색
-4. 탐욕 알고리즘
+### 4. 탐욕 알고리즘
   - 그리디 알고리즘
-5. 정수론
+### 5. 정수론
   - 소수 구하기
   - 오일러피
   - 유클리드 호제법
-6. 그래프
+### 6. 그래프
   - 그래프란
   - 유니온 파인드
   - 위상 정렬
@@ -47,12 +47,12 @@ Doit 알고리즘 코딩 테스트 자바 편.
   - 벨만 포드
   - 플로이드 워셜
   - 최소 신장 트리
-7. 트리
+### 7. 트리
   - 트리란
   - 이진트리
   - 세그먼트 트리
   - LCA
-8. 조합
+### 8. 조합
   - 조합이란
-9. 동적 프로그래밍
+### 9. 동적 프로그래밍
   - 동적 프로그래란
