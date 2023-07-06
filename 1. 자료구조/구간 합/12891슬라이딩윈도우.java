@@ -8,46 +8,77 @@
 
 /* 문제 해석
  * 
- * 주어진 재료 N개는 15000개 이하이고, 
- * 이를 통해 만들 숫자 M은 1천만 이하이다.
- * 숫자 두 개의 합이 M이 되는 가짓수를 구해야 하는데,
- * 단순히 for문을 쓰면 최악의 경우 10억번의 연산을 해야 한다.
- * 따라서 주어진 배열을 정렬한 후(시간복잡도 O(nlogn))
- * 오름차순 정렬된 배열을 투포인터로 해결할 것이다.
+ * 최대 100만자리 문자열에서
+ * 1~100만 자리의 암호를 추출하고자 한다.
+ * 시간 복잡도가 O(n)이어야 하므로 투포인터를 활용한다.
  */
+
 
 import java.io.*;
 import java.util.*;
 
 public class Main {
+	static 	int ACGT[] = new int[4];
+	static 	int acgtSUM[] = new int[4];
+
+	public static void add(char c) {
+		switch(c) {
+		case 'A': acgtSUM[0]++; break;
+		case 'C': acgtSUM[1]++; break;
+		case 'G': acgtSUM[2]++; break;
+		case 'T': acgtSUM[3]++; break;
+		}
+	}
+	
+	public static void sub(char c) {
+		switch(c) {
+		case 'A': acgtSUM[0]--; break;
+		case 'C': acgtSUM[1]--; break;
+		case 'G': acgtSUM[2]--; break;
+		case 'T': acgtSUM[3]--; break;
+		}
+	}
+	
+	public static boolean check() {
+		if((ACGT[0] <= acgtSUM[0])&&(ACGT[1] <= acgtSUM[1])
+				&&(ACGT[2] <= acgtSUM[2])&&(ACGT[3] <= acgtSUM[3]))
+			return true;
+		else
+			return false;
+		
+	}
+	
 	public static void main(String[]args) throws IOException {
-
-		//배열 랜덤 생성.
-		int arr1[] = new int [10000];
-		Random rand = new Random();		
-		for(int i=0;i<100;i++) {
-			arr1[i] = rand.nextInt(100000)+1;
+		
+		//입력
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(bf.readLine());
+		//전체 길이 S와 부분 길이 P
+		int S = Integer.parseInt(st.nextToken());
+		int P = Integer.parseInt(st.nextToken());
+		//전체 문자열
+		String str = bf.readLine();
+		char arr[] = str.toCharArray();
+		//ACGT 최소 개수
+		st = new StringTokenizer(bf.readLine());		
+		for(int i=0;i<4;i++) {
+			ACGT[i] = Integer.parseInt(st.nextToken());
 		}
-
-		ArrayList<Integer> list1 = new ArrayList<>();
-		for(int i=0;i<100;i++) {
-			list1.add(rand.nextInt(100000)+1);
+		
+		//투 포인터 만들기
+		int count = 0;
+		for(int i=0;i<P;i++) {
+			add(arr[i]);
 		}
-				
-		// 배열의 arrays.sort()
-		long arr1Before = System.currentTimeMillis();		
-		Arrays.sort(arr1);
-		long arr1After = System.currentTimeMillis(); 
-		long arr1Time = (arr1After - arr1Before);
-		System.out.println("배열에 Arrays.sort()를 쓴 경우 : "+arr1Time + "\n");
-		
-		// 리스트의 Collectionis.sort()
-		
-		long list1Before = System.currentTimeMillis();		
-		Collections.sort(list1);
-		long list1After = System.currentTimeMillis(); 
-		long list1Time = (arr1After - arr1Before);
-		System.out.println("배열에 Arrays.sort()를 쓴 경우 : "+list1Time + "\n");
-		
+		if(check()) count++;
+		//계산하기.
+		for(int last=P;last<S;last++) {
+			int first = last-P;
+			add(arr[last]);
+			sub(arr[first]);
+			first++;
+			if(check()) count++;
+		}
+		System.out.println(count);
 	}
 }
