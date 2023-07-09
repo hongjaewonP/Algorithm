@@ -27,7 +27,7 @@ Doit 알고리즘 코딩 테스트 자바 편.
 ### 0. [시간복잡도와 디버깅](https://github.com/hongjaewonP/Algorithm/blob/main/0.%20test.md)
 ### 1. 자료구조
   - [배열과 리스트](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EB%B0%B0%EC%97%B4%EA%B3%BC%20%EB%A6%AC%EC%8A%A4%ED%8A%B8)
-  - [구간 합](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EA%B5%AC%EA%B0%84%20%ED%95%A9)
+  - [구간 합과 투 포인터](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EA%B5%AC%EA%B0%84%20%ED%95%A9)
   - [스택과 큐](https://github.com/hongjaewonP/Algorithm/tree/main/1.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%8A%A4%ED%83%9D%EA%B3%BC%20%ED%81%90)
 ### 2. 정렬
   - 버블 정렬
